@@ -12,6 +12,7 @@ public class Task1 {
          FileWriter writer  = new FileWriter(dataFile, true);
          writer.append(data);
          writer.flush();
+         writer.close();
      }
 
      // 2. ArrayIndexOutOfBoundsException. Индекс за пределами массива
