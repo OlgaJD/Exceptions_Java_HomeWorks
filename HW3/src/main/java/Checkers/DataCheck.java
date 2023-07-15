@@ -27,7 +27,7 @@ public class DataCheck {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
         LocalDate birthDay = LocalDate.parse(element, formatter);
         LocalDate dateNow = LocalDate.now();
-        return !birthDay.isBefore(dateNow);
+        return birthDay.isBefore(dateNow);
     }
 
     public static boolean checkPhoneNumber(String element) {

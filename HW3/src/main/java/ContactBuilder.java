@@ -23,7 +23,7 @@ public class ContactBuilder {
         if (!DataCheck.checkBirthDayFormat(temp[3])) {
             throw new IncorrectBirthDayException("Формат даты рождения не верный");
         }
-        if (DataCheck.checkDateNow(temp[3])) {
+        if (!DataCheck.checkDateNow(temp[3])) {
             throw new IncorrectBirthDayException("Указанная дата рождения еще не наступила");
         }
         if (!DataCheck.checkPhoneNumber(temp[4])) {
